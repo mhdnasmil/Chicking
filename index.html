@@ -12,26 +12,27 @@
 <body>
    
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="header" class="hero">
     <div class="overlay">
       <div class="navbar">
         <img src="assets/img/Logo.webp" alt="Chicking Logo" class="logo">
         <nav>
-          <a href="#">HOME</a>
-          <a href="#">MENU</a>
-          <a href="#">ABOUT US</a>
+          <a href="#header" class="active">HOME</a>
+          <a href="#about">ABOUT US</a>
+          <a href="#menu">MENU</a>
           <a href="#">CAREER</a>
-          <a href="#">CONTACT US</a>
+          <a href="#contact">CONTACT US</a>
         </nav>
       </div>
       <div class="order-button">
-        <a href="#" class="btn">ORDER NOW</a>
+        <a href="#" class="btn">ORDER NOW <img src="assets/img/ordervector.svg" alt="Arrow" style="width: 27px;" />
+</a>
       </div>
     </div>
   </section>
 
   <!-- Our Story Section -->
-  <section class="story-section">
+  <section id="about" class="story-section">
     <h2>OUR STORY</h2>
     <div class="story-block">
       <img src="assets/img/ourstory1.png" alt="Restaurant" />
@@ -75,7 +76,7 @@
   </section>
 
   <!-- Browse Menu Section -->
-  <section class="browse-menu">
+  <section id="menu" class="browse-menu">
     <h2>BROWSE MENU</h2>
     <div class="menu-grid">
       <div class="menu-box">01<br><span>KERALA</span></div>
@@ -95,7 +96,7 @@
   </section>
 
   <!-- Contact Us Section -->
-  <section class="contact-us">
+  <section id="contact" class="contact-us">
     <h2>CONTACT US</h2>
     <form>
       <div class="form-group">
@@ -125,8 +126,11 @@
         <a href="#"><img src="assets/img/playstore.png" alt="Play Store"></a>
       </div>
     </div>
-    <p class="copyright">Enjoy all the Products from Chicking@2024</p>
+    <p class="copyright">Designed by Studioaman | Developed by Nasmil</p>
   </footer>
+
+  <!-- Main JS File -->
+  <script src="assets/main.js"></script>
 
 </body>
 </html>
