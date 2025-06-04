@@ -77,6 +77,10 @@ h3 {
   color: #BE1522;
 }
 
+.navbar nav a:hover {
+  color: white;
+}
+
 .order-button {
   align-self: flex-end;
   margin: 20px;
@@ -421,4 +425,11 @@ button {
   padding: 6px 0;
   margin-top: 10px;
   letter-spacing: 0.5px;
+}
+.footer-bottom a{
+  text-decoration: none;
+  color: aqua;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
