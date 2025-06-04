@@ -442,7 +442,8 @@ button {
 }
 .footer-bottom a{
   text-decoration: none;
-  color: aqua;
+  color: white;
+  font-weight: bold;
 }
 .footer-bottom a:hover {
   text-decoration: underline;
