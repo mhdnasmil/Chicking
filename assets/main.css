@@ -73,7 +73,7 @@ h3 {
   padding-left: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   color: #BE1522;
 }
 
@@ -133,7 +133,7 @@ h3 {
   border: none;
   height: 2px;
   background-color: white;
-  width: 750px; 
+  width: 800px; 
   margin: 20px 0;
   position: relative;
   bottom: 70px;
@@ -234,7 +234,7 @@ h3 {
   border: none;
   height: 2px;
   background-color: black;
-  width: 750px; 
+  width: 800px; 
   margin: 20px 0;
   position: relative;
   bottom: 100px;
