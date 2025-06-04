@@ -99,11 +99,29 @@ h3 {
   width: 100%;
   background-color: #BE1522;
   margin: 0px;
-  color: white;
+}
+
+.story-header h2{
   font-weight: 600;
   font-size: 45px;
+  color: white;
   text-align: left;
+  padding-left: 50px;
+  align-items: center; 
+  display: flex; 
 }
+.story-header hr{
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 750px; 
+  margin: 20px 0;
+  position: relative;
+  bottom: 65px;
+  left: 450px;
+}
+}
+
 .story-section {
   padding: 0px 0px;
   background-color: #f9f9f9;
