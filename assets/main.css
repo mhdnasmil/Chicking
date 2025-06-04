@@ -116,20 +116,17 @@ h3 {
 
 /* Our Story Section */
 .story-header h2{
-  height: 100px;
-  width: 100%;
-  background-color: #BE1522;
-  margin: 0px;
-}
-
-.story-header h2{
   font-weight: 600;
   font-size: 45px;
   color: white;
   text-align: left;
-  padding-left: 50px;
+  padding-left: 70px;
   align-items: center; 
   display: flex; 
+  height: 100px;
+  width: 100%;
+  background-color: #BE1522;
+  margin: 0px;
 }
 
 .story-header hr{
@@ -230,6 +227,7 @@ h3 {
   padding-left: 50px;
   position: relative;
   bottom: 50px;
+  color: #b4001e;
 }
 
 .browse-menu hr{
@@ -262,6 +260,7 @@ h3 {
   width: 227.25px;
   height: 202.5px;
   font-size: 80px;
+  color: #b4001e;
 }
 
 .menu-box span{
