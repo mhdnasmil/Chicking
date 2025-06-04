@@ -1,4 +1,7 @@
 /* style.css */
+* {
+  box-sizing: border-box;
+}
 
 /* Base Styles */
 body {
@@ -110,6 +113,7 @@ h3 {
   align-items: center; 
   display: flex; 
 }
+
 .story-header hr{
   border: none;
   height: 2px;
@@ -119,7 +123,6 @@ h3 {
   position: relative;
   bottom: 65px;
   left: 450px;
-}
 }
 
 .story-section {
@@ -135,12 +138,28 @@ h3 {
 }
 
 .story-block img {
-  max-width: 40%;
-  border-radius: 10px;
+  width: 542px; 
+  height: 426px;
+  border-radius: 30px;
+  position: relative;
+  left: 100px;
+  
 }
 
 .text-block {
-  flex: 1;
+  padding-left: 180px;
+}
+
+.text-block h3{
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.text-block p {
+  font-size: 18.75px;
+  position: relative;
+  bottom: 0px;
+  letter-spacing: 4%;
 }
 
 /* Features Section */
