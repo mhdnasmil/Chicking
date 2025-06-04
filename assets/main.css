@@ -98,7 +98,7 @@ h3 {
 
 /* Our Story Section */
 .story-header h2{
-  height: 90px;
+  height: 100px;
   width: 100%;
   background-color: #BE1522;
   margin: 0px;
@@ -148,6 +148,7 @@ h3 {
 
 .text-block {
   padding-left: 180px;
+  padding-bottom: 30px;
 }
 
 .text-block h3{
@@ -166,20 +167,35 @@ h3 {
 .features {
   display: flex;
   justify-content: space-around;
-  background-color: white;
+  background-color: #BE1522;
   padding: 40px 20px;
   flex-wrap: wrap;
+  width: 100%;
+  height: 449px;
 }
 
 .feature-box {
   text-align: center;
-  max-width: 200px;
+  width: 287px;
+  height: 283px;
   margin: 10px;
+  background-color: white;
+  border-radius: 30px;
+  position: relative;
+  top: 30px;
 }
 
 .feature-box img {
-  width: 50px;
+  width: 80px;
   margin-bottom: 10px;
+  padding-top: 60px;
+}
+
+.feature-box p{
+  font-size: 23px;
+  font-weight: 500;
+  position: relative;
+  bottom: 20px;
 }
 
 /* Browse Menu */
