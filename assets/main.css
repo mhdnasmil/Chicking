@@ -201,6 +201,7 @@ h3 {
 /* Browse Menu */
 .browse-menu {
   padding: 40px 20px;
+  height: 850px;
 }
 
 .browse-menu h2{
@@ -284,12 +285,12 @@ h3 {
 
 /* Contact Us */
 .contact-us {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
+  background-color: white;
+  height: 500px;
 }
 
 form {
-  max-width: 600px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -299,30 +300,39 @@ form {
   margin-bottom: 10px;
 }
 
-input, textarea {
+input{
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #F5F5F5;
+  border: #F5F5F5;
   font-family: 'Poppins', sans-serif;
 }
+textarea{
+  width: 100%;
+  padding: 40px;
+    background-color: #F5F5F5;
 
+  border: #F5F5F5;
+  font-family: 'Poppins', sans-serif;
+}
 button {
   background-color: #b4001e;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 50px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+  position: relative;
+  top: 20px;
+  font-size: 18px;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: white;
-  padding: 20px;
+  background-color: white;
+  color: black;
   text-align: center;
+  height: 200px;
 }
 
 .footer-top {
@@ -335,7 +345,7 @@ footer {
 
 .quick-links a,
 .socials a {
-  color: white;
+  color: black;
   margin: 0 10px;
   text-decoration: none;
 }
