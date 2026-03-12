@@ -1,169 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicking</title>
-    <link href="assets/main.css" rel="stylesheet">
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/main.css" rel="stylesheet">
 </head>
 
 <body>
-   
-  <!-- Hero Section -->
+
+  <!-- ========== HERO SECTION ========== -->
   <section id="header" class="hero">
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="assets/img/video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/img/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <div class="overlay">
-    <div class="navbar">
-      <img src="assets/img/Logo.webp" alt="Chicking Logo" class="logo">
-      <nav class="nav-links">
-        <a href="index.html" class="active">HOME</a>
-        <a href="#about">ABOUT US</a>
-        <a href="#menu">MENU</a>
-        <a href="career.html">CAREER</a>
-        <a href="#contact">CONTACT US</a>
+    <div class="overlay">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg px-3 px-md-4">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/Logo.webp" alt="Chicking Logo" class="logo">
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler hamburger border-0" type="button"
+          data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-2 text-center py-3 py-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="career.html">CAREER</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+          </ul>
+        </div>
       </nav>
-    </div>
-    <div class="order-button">
-  <a href="https://india.chickingdelivery.com/" target="_blank" rel="noopener noreferrer" class="button-primary">
-    ORDER NOW 
-    <img src="assets/img/ordervector.svg" alt="Arrow" class="arrow-icon" />
-  </a>
-</div>
-  </div>
-</section>
 
-  <!-- Our Story Section -->
+      <!-- Order Button -->
+      <div class="order-button text-center text-lg-end pe-lg-5 pb-4">
+        <a href="https://india.chickingdelivery.com/" target="_blank" rel="noopener noreferrer" class="button-primary">
+          ORDER NOW
+          <img src="assets/img/ordervector.svg" alt="Arrow" class="arrow-icon" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OUR STORY SECTION ========== -->
   <section id="about" class="story-section">
     <div class="story-header">
       <h2>OUR STORY</h2>
       <hr>
     </div>
-   
-    <div class="story-block">
-      <img src="assets/img/ourstory1.png" alt="Restaurant" />
-      <div class="text-block">
-        <h3>HOW IT ALL BEGAN</h3>
-        <p>
-          Founded in Dubai in 2000, Chicking® has <br> grown from a single outlet into a global <br> brand with 400+ locations across 36+ <br> countries <br><br>
-          In India, we began on MG Road and now <br> operate 100+ outlets in cities like Kerala, <br> Chennai, Coimbatore, Bangalore, <br> Hyderabad, Mumbai, Delhi, Pune, Kashmir, <br> and Goa—delivering the perfect blend of <br> taste, quality, and affordability that families <br> love
-        </p>
+
+    <!-- Story Block 1 -->
+    <div class="container-fluid px-0">
+      <div class="story-block row align-items-center g-0 mb-5 px-3 px-md-5">
+        <div class="col-12 col-md-5">
+          <img src="assets/img/ourstory1.png" alt="Restaurant" class="story-img img-fluid rounded-4" />
+        </div>
+        <div class="col-12 col-md-7">
+          <div class="text-block ps-md-5 pt-4 pt-md-0">
+            <h3>HOW IT ALL BEGAN</h3>
+            <p>
+              Founded in Dubai in 2000, Chicking® has grown from a single outlet into a global
+              brand with 400+ locations across 36+ countries.<br><br>
+              In India, we began on MG Road and now operate 100+ outlets in cities like Kerala,
+              Chennai, Coimbatore, Bangalore, Hyderabad, Mumbai, Delhi, Pune, Kashmir,
+              and Goa—delivering the perfect blend of taste, quality, and affordability that families love.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="story-block">
-      <img src="assets/img/ourstory2.png" alt="Food" />
-      <div class="text-block">
-        <h3>OUR JOURNEY OF FLAVOR AND COMMITMENT</h3>
-        <p>
-          ChicKing® was founded with a vision to <br> bring happiness and great taste to <br> customers worldwide. Backed by India- <br>based Channel Foods Pvt. Ltd. and Mansor <br> Foods Pvt. Ltd., the brand began with a focus <br> on real, flavorful fried chicken. <br><br>
-          Today, ChicKing® is a global favorite, known <br> for its quality, innovative menu, and <br> passionate growth—delighting customers <br> with over a decade of excellence.
-        </p>
+
+      <!-- Story Block 2 -->
+      <div class="story-block row align-items-center g-0 mb-5 px-3 px-md-5">
+        <div class="col-12 col-md-5">
+          <img src="assets/img/ourstory2.png" alt="Food" class="story-img img-fluid rounded-4" />
+        </div>
+        <div class="col-12 col-md-7">
+          <div class="text-block ps-md-5 pt-4 pt-md-0">
+            <h3>OUR JOURNEY OF FLAVOR AND COMMITMENT</h3>
+            <p>
+              ChicKing® was founded with a vision to bring happiness and great taste to
+              customers worldwide. Backed by India-based Channel Foods Pvt. Ltd. and Mansor
+              Foods Pvt. Ltd., the brand began with a focus on real, flavorful fried chicken.<br><br>
+              Today, ChicKing® is a global favorite, known for its quality, innovative menu, and
+              passionate growth—delighting customers with over a decade of excellence.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-   <!-- Feature Highlights -->
-  <section class="features">
-    <div class="feature-box">
-      <img src="assets/img/icon1.png" alt="Icon 1">
-      <p>25+ Years of <br> Experience</p>
-    </div>
-    <div class="feature-box">
-      <img src="assets/img/icon2.png" alt="Icon 2">
-      <p>For Every <br> Taste</p>
-    </div>
-    <div class="feature-box">
-      <img src="assets/img/icon3.png" alt="Icon 3">
-      <p>36+ Countries <br> And Counting</p>
-    </div>
-    <div class="feature-box">
-      <img src="assets/img/icon4.png" alt="Icon 4">
-      <p>Fresh And <br> Flavorful</p>
     </div>
   </section>
 
-  <!-- Browse Menu Section -->
-  <section id="menu" class="browse-menu">
-    <h2>BROWSE MENU</h2>
-    <hr>
-    <div class="menu-grid">
-      <div class="menu-box">01<br><span>KERALA</span></div>
-      <div class="menu-box">02<br><span>COIMBATORE</span></div>
-      <div class="menu-box">03<br><span>CHENNAI</span></div>
-      <div class="menu-box">04<br><span>KASHMIR</span></div>
-      <div class="menu-box">05<br><span>HYDERABAD</span></div>
-      <div class="menu-box">06<br><span>BANGALORE</span></div>
-      <div class="menu-box">07<br><span>PUNE</span></div>
-      <div class="menu-box">08<br><span>GOA</span></div>
-      <div class="menu-box">09<br><span>MUMBAI</span></div>
+  <!-- ========== FEATURES SECTION ========== -->
+  <section class="features py-5">
+    <div class="container">
+      <div class="row justify-content-center g-4">
+        <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
+          <div class="feature-box text-center">
+            <img src="assets/img/icon1.png" alt="Icon 1">
+            <p>25+ Years of <br> Experience</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
+          <div class="feature-box text-center">
+            <img src="assets/img/icon2.png" alt="Icon 2">
+            <p>For Every <br> Taste</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
+          <div class="feature-box text-center">
+            <img src="assets/img/icon3.png" alt="Icon 3">
+            <p>36+ Countries <br> And Counting</p>
+          </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
+          <div class="feature-box text-center">
+            <img src="assets/img/icon4.png" alt="Icon 4">
+            <p>Fresh And <br> Flavorful</p>
+          </div>
+        </div>
+      </div>
     </div>
-      <div class="menu-footer">
+  </section>
+
+  <!-- ========== BROWSE MENU SECTION ========== -->
+  <section id="menu" class="browse-menu py-5">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="d-flex align-items-center mb-4 gap-3">
+        <h2 class="mb-0">BROWSE MENU</h2>
+        <hr class="flex-grow-1 d-none d-md-block">
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">01<br><span>KERALA</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">02<br><span>COIMBATORE</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">03<br><span>CHENNAI</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">04<br><span>KASHMIR</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">05<br><span>HYDERABAD</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">06<br><span>BANGALORE</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">07<br><span>PUNE</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">08<br><span>GOA</span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="menu-box">09<br><span>MUMBAI</span></div>
+        </div>
+      </div>
+
+      <!-- Menu Footer -->
+      <div class="menu-footer d-flex align-items-center justify-content-center gap-4 mt-4 mx-auto">
         <img src="assets/img/Logo.webp" alt="Chicking Logo">
         <a href="menu.html" class="view-all">View All Menu &rarr;</a>
       </div>
+    </div>
   </section>
 
-
-  <!-- Contact Us Section -->
-  
-  <section id="contact" class="contact-us">
+  <!-- ========== CONTACT US SECTION ========== -->
+  <section id="contact" class="contact-us pb-5">
     <div class="story-header">
-    <h2>CONTACT US</h2>
-    <hr>
-  </div>
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Name*" required>
-        <input type="email" placeholder="Email*" required>
-      </div>
-      <textarea placeholder="Message*" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+      <h2>CONTACT US</h2>
+      <hr>
+    </div>
+    <div class="container">
+      <form class="mt-4">
+        <div class="row g-3 mb-3">
+          <div class="col-12 col-md-6">
+            <input type="text" class="form-control contact-input" placeholder="Name*" required>
+          </div>
+          <div class="col-12 col-md-6">
+            <input type="email" class="form-control contact-input" placeholder="Email*" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control contact-textarea" placeholder="Message*" rows="5" required></textarea>
+        </div>
+        <div class="text-start">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="assets/img/Logo.webp" alt="Chicking Logo" />
-    </div>
-    <div class="footer-links">
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#menu">Menu</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul class="footer-links2">
-          <li><a href="career.html">Career</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-social">
-      <a href="#"><img src="assets/img/insta.svg" alt="Instagram" /></a>
-      <a href="#"><img src="assets/img/yt.svg" alt="YouTube" /></a>
-      <a href="#"><img src="assets/img/fb.svg" alt="Facebook" /></a>
-    </div>
-    
-  </div>
-  <div class="footer-bottom">
-    Designed By <a href="https://www.instagram.com/studioamaaan">Studioaman</a> | Developed By <a href="https://www.instagram.com/nasmillll">Nasmil</a>
-  </div>
-</footer>
+    <div class="container py-4">
+      <div class="row g-4 align-items-start justify-content-between">
+        <!-- Logo -->
+        <div class="col-12 col-sm-6 col-md-3 text-center text-md-start">
+          <img src="assets/img/Logo.webp" alt="Chicking Logo" style="height:48px;">
+        </div>
 
+        <!-- Quick Links -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul class="list-unstyled footer-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+              </ul>
+            </div>
+            <div class="col-6 pt-md-4 mt-md-2">
+              <ul class="list-unstyled footer-list">
+                <li><a href="career.html">Career</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-  <!-- Main JS File -->
-  <script src="assets/main.js"></script>
+        <!-- Social -->
+        <div class="col-12 col-sm-12 col-md-3 d-flex justify-content-center justify-content-md-end align-items-center gap-3">
+          <a href="#"><img src="assets/img/insta.svg" alt="Instagram" style="width:28px;height:28px;"></a>
+          <a href="#"><img src="assets/img/yt.svg" alt="YouTube" style="width:28px;height:28px;"></a>
+          <a href="#"><img src="assets/img/fb.svg" alt="Facebook" style="width:28px;height:28px;"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      Designed By <a href="https://www.instagram.com/studioamaaan">Studioaman</a> |
+      Developed By <a href="https://www.instagram.com/nasmillll">Nasmil</a>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/main.js"></script>
 </body>
 </html>

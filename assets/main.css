@@ -1,9 +1,7 @@
-/* style.css */
-* {
-  box-sizing: border-box;
-}
+/* main.css — Brand styles only. Bootstrap handles the responsive grid. */
 
-/* Base Styles */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -11,18 +9,11 @@ body {
   background-color: #fff;
 }
 
-h2 {
-  text-align: center;
-  margin: 40px 0 20px;
-  color: #b4001e;
-}
+h3 { color: #b4001e; }
 
-h3 {
-  color: #b4001e;
-}
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* =============================================
+   HERO
+============================================= */
 .hero {
   position: relative;
   height: 640px;
@@ -32,8 +23,7 @@ h3 {
 
 .background-video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -41,51 +31,82 @@ h3 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.4);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  position: relative;
   z-index: 1;
-  position: relative;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  right: 50px;
-  width: 100%;
-  padding: 0px 0px;
 }
 
-.navbar .logo {
-  height: 57.75px;
-  width: 172.14px;
-  position: relative;
-  left: 100px;
+/* Bootstrap navbar inside the overlay */
+.overlay .navbar {
+  background: transparent !important;
 }
 
+.overlay .navbar .logo {
+  height: 57px;
+  width: auto;
+}
 
-.navbar nav a {
-  margin: 0 10px;
-  padding-left: 50px;
-  text-decoration: none;
+/* Nav links */
+.overlay .nav-link {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
+  color: #BE1522 !important;
+  padding: 6px 12px;
+}
+.overlay .nav-link:hover,
+.overlay .nav-link.active {
+  color: #fff !important;
+}
+
+/* Mobile full-screen nav */
+@media (max-width: 991.98px) {
+  #mainNav {
+    background-color: rgba(0,0,0,0.95);
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: flex !important;         /* override BS collapse hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  #mainNav.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #mainNav .nav-link {
+    font-size: 24px !important;
+    color: #fff !important;
+  }
+  #mainNav .nav-link:hover {
+    color: #BE1522 !important;
+  }
+}
+
+.hamburger {
+  background: none;
+  border: none !important;
+  font-size: 30px;
   color: #BE1522;
+  cursor: pointer;
+  line-height: 1;
+  /* Bootstrap's navbar-toggler already positions it */
 }
+.hamburger:focus { box-shadow: none; }
 
-.navbar nav a:hover {
-  color: white;
-}
-
+/* Order button */
 .button-primary {
   background-color: #b4001e;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
-  font-size: 26px;
+  font-size: 22px;
   text-decoration: none;
   font-weight: 600;
   border-radius: 14px;
@@ -93,363 +114,331 @@ h3 {
   align-items: center;
   gap: 10px;
   border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 }
-
 .button-primary:hover {
   background-color: #930018;
+  color: #fff;
   transform: translateY(-2px);
 }
-
 .arrow-icon {
-  width: 27px;
-  position: relative;
-  bottom: 0px;
+  width: 24px;
 }
-.order-button{
-  padding-left: 1000px;
+.order-button {
   padding-bottom: 40px;
+  padding-right: 20px;
 }
 
-
-
-
-/* Our Story Section */
-.story-header h2{
+/* =============================================
+   OUR STORY
+============================================= */
+.story-header h2 {
   font-weight: 600;
-  font-size: 45px;
-  color: white;
-  text-align: left;
-  padding-left: 70px;
-  align-items: center; 
-  display: flex; 
-  height: 100px;
-  width: 100%;
+  font-size: clamp(24px, 4vw, 45px);
+  color: #fff;
   background-color: #BE1522;
-  margin: 0px;
-}
-
-.story-header hr{
-  border: none;
-  height: 2px;
-  background-color: white;
-  width: 800px; 
-  margin: 20px 0;
-  position: relative;
-  bottom: 70px;
-  left: 450px;
-}
-
-.story-section {
-  padding: 0px 0px;
-  background-color: white;
-}
-
-.story-block {
+  margin: 0;
+  padding: 0 30px;
+  height: 90px;
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
-  gap: 20px;
 }
 
-.story-block img {
-  width: 542px; 
-  height: 426px;
+.story-header hr {
+  border: none;
+  height: 2px;
+  background-color: #fff;
+  opacity: 1;
+  margin: -45px 30px 20px auto;
+  width: 55%;
+}
+
+.story-section { padding-bottom: 20px; }
+
+.story-img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
   border-radius: 30px;
-  position: relative;
-  left: 100px;
-  
 }
 
-.text-block {
-  padding-left: 180px;
-  padding-bottom: 30px;
-}
-
-.text-block h3{
+.text-block h3 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(18px, 2.5vw, 30px);
   color: #BE1522;
 }
-
 .text-block p {
-  font-size: 18.75px;
-  position: relative;
-  bottom: 0px;
-  letter-spacing: 4%;
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: 1.8;
 }
 
-/* Features Section */
+/* =============================================
+   FEATURES
+============================================= */
 .features {
-  display: flex;
-  justify-content: space-around;
   background-color: #BE1522;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 449px;
 }
 
 .feature-box {
-  text-align: center;
-  width: 287px;
-  height: 283px;
-  margin: 10px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 30px;
-  position: relative;
-  top: 30px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 280px;
 }
-
 .feature-box img {
-  width: 80px;
-  margin-bottom: 10px;
-  padding-top: 60px;
+  width: 70px;
+  margin-bottom: 12px;
 }
-
-.feature-box p{
-  font-size: 23px;
+.feature-box p {
+  font-size: clamp(14px, 1.8vw, 22px);
   font-weight: 500;
-  position: relative;
-  bottom: 0px;
+  margin: 0;
 }
 
-/* Browse Menu */
-.browse-menu {
-  padding: 100px 20px;
-  height: 850px;
-}
+/* =============================================
+   BROWSE MENU
+============================================= */
+.browse-menu { background-color: #fff; }
 
-.browse-menu h2{
+.browse-menu h2 {
   font-weight: 600;
-  font-size: 45px;
-  text-align: left;
-  padding-left: 50px;
-  position: relative;
-  bottom: 50px;
+  font-size: clamp(24px, 4vw, 45px);
   color: #b4001e;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.browse-menu hr{
+.browse-menu .flex-grow-1 {
   border: none;
   height: 2px;
-  background-color: black;
-  width: 800px; 
-  margin: 20px 0;
-  position: relative;
-  bottom: 100px;
-  left: 450px;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  text-align: center;
-  padding-left: 150px;
-  padding-right: 150px;
-  position: relative;
-  bottom: 50px;
+  background-color: #000;
+  opacity: 1;
 }
 
 .menu-box {
   background-color: #F5F5F5;
-  padding: 20px;
-  font-size: 18px;
+  padding: 15px 10px 10px;
+  font-size: clamp(40px, 6vw, 80px);
   font-weight: 600;
-  width: 227.25px;
-  height: 202.5px;
-  font-size: 80px;
   color: #b4001e;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 1 / 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
-
-.menu-box span{
-  font-size: 18.75px;
-  position: relative;
-  bottom: 80px;
-}
-
 .menu-box:first-child {
   background-color: #b4001e;
-  color: white;
+  color: #fff;
+}
+.menu-box span {
+  font-size: clamp(11px, 1.5vw, 18px);
+  font-weight: 600;
+  margin-top: 6px;
 }
 
 .menu-footer {
-  text-align: center;
-  height: 200px;
-  width: 750px;
-  background-color: #F5F5F5;  
-  position: relative;
-  bottom: 250px;
-  left: 405px;
+  background-color: #F5F5F5;
+  padding: 25px 30px;
+  max-width: 700px;
 }
-
 .menu-footer img {
-  height: 60.75px;
-  position: relative;
-  top: 65px;
-  right: 80px;
+  height: 55px;
+  width: auto;
 }
-
 .view-all {
-  display: inline-block;
-  margin-top: 10px;
   color: #b4001e;
   font-weight: 500;
-  position: relative;
-  top: 70px;
-  font-size: 20px;
+  font-size: clamp(15px, 1.8vw, 20px);
+  text-decoration: none;
 }
+.view-all:hover { text-decoration: underline; }
 
-/* Contact Us */
-.contact-us {
-  background-color: white;
-  height: 500px;
-}
+/* =============================================
+   CONTACT US
+============================================= */
+.contact-us { background-color: #fff; }
 
-form {
-  max-width: 900px;
-  margin: auto;
-}
-
-.form-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-input{
-  width: 100%;
-  padding: 20px;
+.contact-input,
+.contact-textarea {
   background-color: #F5F5F5;
-  border: #F5F5F5;
+  border: 1px solid #F5F5F5;
+  border-radius: 0;
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  padding: 18px 20px;
 }
-textarea{
-  width: 100%;
-  padding: 40px;
-    background-color: #F5F5F5;
+.contact-input:focus,
+.contact-textarea:focus {
+  background-color: #F5F5F5;
+  border-color: #b4001e;
+  box-shadow: none;
+}
+.contact-textarea { padding: 20px; }
 
-  border: #F5F5F5;
-  font-family: 'Poppins', sans-serif;
-}
-button {
+.btn-submit {
   background-color: #b4001e;
-  color: white;
-  padding: 20px 50px;
+  color: #fff;
+  padding: 14px 50px;
   border: none;
   cursor: pointer;
   font-weight: 600;
-  position: relative;
-  top: 20px;
-  font-size: 18px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s;
 }
+.btn-submit:hover { background-color: #930018; }
 
-/* Footer */
+/* =============================================
+   FOOTER
+============================================= */
 .footer {
   background: #fff;
   border-top: 1px solid #eee;
-  font-family: Arial, sans-serif;
-  color: #222;
-  padding: 0;
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 32px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 24px;
-}
-
-.footer-logo {
-  flex: 1 1 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  min-width: 120px;
-}
-
-.footer-logo img {
-  height: 48px;
-  width: auto;
-}
-
-.footer-links {
-  display: flex;
-  flex: 2 1 240px;
-  gap: 56px;
-  min-width: 200px;
-}
-
-.footer-links h4 {
-  font-size: 18px;
+.footer-heading {
+  font-size: 17px;
   color: #b4001e;
   font-weight: 700;
   margin-bottom: 10px;
-  margin-top: 0;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 0px;
-}
-
-.footer-links li {
-  margin-bottom: 8px;
-}
-.footer-links2{
-  position: relative;
-  top: 30px;
-}
-
-.footer-links a {
+.footer-list li { margin-bottom: 8px; }
+.footer-list a {
   color: #222;
   text-decoration: none;
   font-size: 15px;
   transition: color 0.2s;
 }
-
-.footer-links a:hover {
-  color: #b4001e;
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+.footer-list a:hover { color: #b4001e; }
 
 .footer-social img {
-  width: 28px;
-  height: 28px;
   transition: transform 0.2s;
 }
-
-.footer-social a:hover img {
-  transform: scale(1.1);
-}
+.footer-social a:hover img { transform: scale(1.1); }
 
 .footer-bottom {
   text-align: center;
   background: #b4001e;
   color: #fff;
-  font-size: 0.95em;
-  padding: 6px 0;
-  margin-top: 10px;
+  font-size: 0.9em;
+  padding: 8px 0;
   letter-spacing: 0.5px;
 }
-.footer-bottom a{
+.footer-bottom a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: bold;
 }
-.footer-bottom a:hover {
-  text-decoration: underline;
+.footer-bottom a:hover { text-decoration: underline; }
+
+/* =============================================
+   MOBILE  (max-width: 991.98px)
+   Mirrors desktop alignment logic at smaller scale.
+   Desktop rule → Mobile equivalent noted inline.
+============================================= */
+@media (max-width: 991.98px) {
+
+  /* --- HERO --- */
+  .hero { height: 100vh; min-height: 480px; }
+
+  /* ORDER BUTTON: desktop = bottom-right (padding-right).
+     Mobile = bottom-center, still at the bottom of the overlay. */
+  .order-button {
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+  .button-primary { font-size: 18px; padding: 10px 18px; }
+
+  /* --- STORY HEADER ---
+     Desktop: h2 fills full-width red bar, hr extends from ~450px to right edge.
+     Mobile:  same full-width red bar, hr sits on the right ~40% of the bar. */
+  .story-header h2 {
+    font-size: 26px;
+    height: 70px;
+    padding-left: 20px;
+  }
+  .story-header hr {
+    width: 40%;
+    margin: -38px 20px 16px auto; /* auto left = pushed to right, mirrors desktop left:450px logic */
+  }
+
+  /* --- STORY BLOCKS ---
+     Desktop: image left (left:100px), text right with large left padding.
+     Mobile:  image full-width centered, text below with consistent side padding. */
+  .story-block {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-bottom: 30px !important;
+  }
+  .story-img {
+    max-width: 100%;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+  }
+  .text-block {
+    padding-left: 4px !important;   /* PS-md-5 override */
+    padding-right: 4px;
+    padding-top: 20px !important;
+    padding-bottom: 10px;
+  }
+  .text-block h3 { font-size: 20px; }
+  .text-block p  { font-size: 15px; line-height: 1.7; }
+
+  /* --- FEATURES ---
+     Desktop: 4 boxes in a row with top:30px lift inside red band.
+     Mobile: 2×2 grid, boxes fill their column, same white-card look. */
+  .features { padding: 24px 12px !important; }
+  .feature-box {
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 22px 12px;
+  }
+  .feature-box img  { width: 52px; padding-top: 0; }
+  .feature-box p    { font-size: 15px; }
+
+  /* --- BROWSE MENU ---
+     Desktop: h2 left-aligned, hr extends to the right.
+     Mobile:  same left-aligned h2, hr hidden (too cramped) — matches d-none d-md-block already in HTML. */
+  .browse-menu { padding: 36px 0 36px !important; }
+  .browse-menu h2 { font-size: 26px; }
+
+  /* Menu boxes: desktop ~227px fixed, mobile fill column with square-ish ratio */
+  .menu-box {
+    aspect-ratio: 1 / 1;
+    font-size: clamp(32px, 10vw, 56px);
+  }
+  .menu-box span { font-size: 12px; }
+
+  /* Menu footer: desktop offset box bottom-center of grid.
+     Mobile: full-width, stacked logo + link, centered. */
+  .menu-footer {
+    max-width: 100%;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 20px 16px;
+    margin-top: 12px;
+  }
+  .menu-footer img { height: 44px; }
+  .view-all { font-size: 16px; }
+
+  /* --- CONTACT ---
+     Desktop: form max-width 900px centered.
+     Mobile:  same centered form, full-width inputs, submit full-width. */
+  .contact-us { padding-bottom: 36px; }
+  .btn-submit  { width: 100%; padding: 14px 20px; font-size: 16px; }
+
+  /* --- FOOTER ---
+     Desktop: logo left, links center, social right in one row.
+     Mobile:  stack all three, each centered. */
+  .footer-heading { text-align: center; }
+  .footer-list    { text-align: center; }
+  .footer-bottom  { font-size: 0.82em; padding: 8px 10px; }
 }
